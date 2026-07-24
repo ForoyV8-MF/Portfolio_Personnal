@@ -1,0 +1,219 @@
+:root
+{
+    /* Quelques variances de Vert */
+    --spring-clear-green: #D3EEED;
+    --wide-green: #6CACA4;
+    --clear-green: oklch(76.755% 0.10812 141.509);
+    --deep-green: oklch(79.778% 0.26303 143.075 / 0.534);
+    --really-deep-green: #2B564D;
+
+    /* Gradient */
+    --gradient:
+    linear-gradient(90deg, var(--spring-clear-green) 70%, var(--wide-green) 100%);
+}
+
+.header-main /* Dimensions et caractéristiques du rectangle de présentation */
+{
+    display : flex; /* Active Flexbox, gap et justify-content */
+    position: relative; /* Position normale au flux de la page */
+    top: 0; /* Collé en haut de la page */
+
+    background: var(--gradient); /* Fond vert-blanc */
+
+    gap: 0.5rem;
+    justify-content: space-between; /* Espace DISPONIBLE entre contenus enfants */
+    align-items: center; /* Centre Verticalement */
+    padding: 1rem 1rem 1rem 1rem; /* Espace Interne (Haut Bas Gauche Droite) */
+    margin-bottom: 1rem; /* Espace de marge au dessous */
+    white-space: nowrap;
+
+    width: 100%; /* Fraction de largeur du contenu parent (Ici, la page) */
+    min-width: 1200px;
+    min-height: 80px;
+
+    box-sizing: border-box; /* Inclut padding et border dans le calcul des dimensions */
+    box-shadow: 0px 2px 10px black; /* Ombre Légère de Surélèvement (Horizontal, Vertical, Flou) */
+
+    border-color: black;
+    border-width: 50px;
+    border-radius: 10px;
+}
+
+.letf-side { flex: 1; text-align: left; }
+
+.nav-link
+{
+    width: 100%;
+
+    background: transparent;
+    background-color: transparent;
+    color: var(--really-deep-green); /* Lien Vert */
+
+    text-decoration: none; /* Pas de Soulignement */
+    transition: color 0.3s; /* Animation au Survol */
+
+    user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; /* Désactive le surlignage pour Safari, Chrome, Mozilla et Internet Explorer */
+}
+
+.logo-link
+{
+    background-color: transparent;
+
+    align-items: center;
+    vertical-align: middle;
+
+    margin-left: 5px;
+    margin-right: 8px;
+    margin-bottom: 5px;
+
+    width: auto;
+    height: 20px;
+}
+
+.center-side
+{
+    flex: content;
+    text-align: center; /* Retour à la ligne centré en block */
+
+    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    color: var(--really-deep-green); /* Texte en Vert */
+}
+
+h1 
+{
+    margin: auto; /* Marges Automatiques */
+    font-size: 4.0rem;  /* Taille du Titre */
+}
+
+h2
+{
+    margin: auto; /* Marges Automatiques */
+    font-size: 1.4rem; /* Taille de la Police */
+    font-style: oblique;
+    opacity: 0.9; /* Légère Transparence */
+}
+
+h3
+{
+    margin: auto; /* Marges Automatiques */
+    font-size: 1.4rem; /* Taille de la Police */
+    font-style: oblique;
+    font-weight: 100;
+}
+
+a { text-decoration: none; }
+
+.right-side { text-align: right; }
+
+.info-card-template /* Dimensions et caractéristiques du rectangle-requin */
+{
+    display : flex; /* Active Flexbox, gap et justify-content */
+    position: relative; /* Position normale au flux de la page */
+
+    background-color: var(--spring-clear-green); /* Fond bleu clair */
+
+    gap: 0.5rem; /* Espace FIXE entre contenus enfants */
+    justify-content: space-between; /* Espace DISPONIBLE entre contenus enfants */
+    align-items: center; /* Centre Verticalement */
+    padding: 1rem 1rem 1rem 1rem; /* Espace Interne (Haut Bas Gauche Droite) */
+
+    margin-top: 1rem; /* Espace de marge au dessus */
+    margin-bottom: 3rem; /* Espace de marge au dessous */
+
+    width: 100%; /* Fraction de largeur du contenu parent (Ici, la page) */
+    min-width: 1200px;
+
+    box-sizing: border-box; /* Inclut padding et border dans le calcul des dimensions */
+    box-shadow: 12px 10px 10px black; /* Ombre Légère de Surélèvement (Horizontal, Vertical, Flou) */
+
+    border-color: black;
+    border-width: 50px;
+    border-radius: 10px; /* Épaisseur des coins */
+}
+
+.info-card-template-banner /* Dimensions et caractéristiques du Info-card */
+{
+    display : flex; /* Active Flexbox, gap et justify-content */
+    position: relative; /* Position normale au flux de la page */
+    white-space: nowrap;
+
+    background-color: var(--wide-green); /* Fond bleu */
+
+    gap: 1rem; /* Espace FIXE entre contenus enfants */
+    justify-content: space-between; /* Espace DISPONIBLE entre contenus enfants */
+    align-items: baseline; /* Garde un retour à la ligne négatif */
+    padding: 1rem 1rem 1rem 1rem; /* Espace Interne (Haut Bas Gauche Droite) */
+
+    width: 100%; /* Fraction de largeur du contenu parent (Ici, le template Requin) */
+
+    box-sizing: border-box; /* Inclut padding et border dans le calcul des dimensions */
+    box-shadow: 12px 10px 10px black; /* Ombre Légère de Surélèvement (Horizontal, Vertical, Flou) */
+
+    border-color: black;
+    border-width: 50px;
+    border-radius: 10px; /* Épaisseur des coins */
+}
+
+.info-card-template-title
+{
+    flex: 0; /* Ne grandit pas, peut rétrécir */
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.info-card-template-content
+{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+
+    width: 100%;
+    max-width: 1875px;
+
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: auto;
+    overflow-wrap: break-word;
+}
+
+.left-side { text-align: left; }
+.right-side { text-align: right; }
+
+.info-card-template-text-format
+{
+    color: rgb(34, 34, 34);
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 210%;
+    font-weight: 600;
+}
+
+.info-card-template-image-format
+{
+    height: fit-content;
+    width: fit-content;
+    max-width: 547px;
+    max-height: 600px;
+
+    margin-top: 1rem;
+    margin-right: 10px;
+}
+
+figcaption
+{
+    font-size: small;
+    font-style: italic;
+}
+
+body
+{
+    background-image: url(./images/Fond_CV_Vert.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.bouton-requin
+{ display: flex; text-align: center; margin-bottom: 0.3rem; }
