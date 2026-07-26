@@ -114,7 +114,7 @@ a { text-decoration: none; }
 
     gap: 0.5rem; /* Espace FIXE entre contenus enfants */
     justify-content: space-between; /* Espace DISPONIBLE entre contenus enfants */
-    align-items: center;
+    align-items: center; /* Centre Verticalement */
     padding: 1rem 1rem 1rem 1rem; /* Espace Interne (Haut Bas Gauche Droite) */
 
     margin-top: 1rem; /* Espace de marge au dessus */
@@ -154,7 +154,7 @@ a { text-decoration: none; }
 }
 
 .info-card-template-title
-{   
+{
     color: white;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 900;
@@ -194,12 +194,9 @@ a { text-decoration: none; }
 
 .info-card-template-image-format
 {
-    height: fit-content;
-    width: fit-content;
-    max-width: 547px;
-    max-height: 600px;
+    max-width: 560px;
+    max-height: 700px;
 
-    margin-top: 1rem;
     margin-right: 10px;
 }
 
