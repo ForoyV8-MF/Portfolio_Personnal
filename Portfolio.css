@@ -188,6 +188,7 @@ a { text-decoration: none; }
 {
     display: flex; /* Aligne horizontalement */
 
+    gap: 1rem;
     padding: 0rem 0rem 1rem 1rem;
 
     width: 100%;
@@ -197,7 +198,7 @@ a { text-decoration: none; }
 
 .info-card-template-text-format
 {
-    width: 69%; /* Promis c'est pas fait éxrpès */
+    width: 69%; /* Promis c'est pas fait éxprès */
 
     color: rgb(34, 34, 34);
 
@@ -222,8 +223,6 @@ a { text-decoration: none; }
         display: flex;
         flex-direction: column; /* Aligne horizontalement */
         align-items: center; /* Centre verticalement */
-
-        gap: 1rem; /* Espace entre l'image et le texte */
 
         width: 100%;
 
