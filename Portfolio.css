@@ -105,7 +105,7 @@ h3
 
 @media (max-width: 980px) /* Pour les écrans type mobile */
 {
-    h1 
+    h1
     {
         margin: auto; /* Marges Automatiques */
         font-size: 2.8rem;  /* Taille du Titre */
@@ -232,12 +232,12 @@ a { text-decoration: none; }
 
     .info-card-template-text-format
     {
-        width: 100%; /* Promis c'est pas fait éxprès */
+        width: 99%; /* Promis c'est pas fait éxprès */
 
         color: rgb(34, 34, 34);
 
         font-family: 'Times New Roman', Times, serif;
-        font-size: 160%;
+        font-size: 130%;
         font-weight: 600;
 
         white-space: wrap; /* Permet le retour à la ligne automatique */
