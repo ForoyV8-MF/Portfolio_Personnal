@@ -4,8 +4,7 @@ class HeaderTemplate extends HTMLElement
     {
         super(); // Il faut forcément dériver de HTML Element
 
-        this.header = document.querySelector('.header-main')
-
+        this.header = document.querySelector('.header-main') // Sélectionne la balise correspondante
         this.classList.add('fade-In-Loading')
     }
 }
@@ -17,12 +16,10 @@ class InfoCardTemplate extends HTMLElement
         super(); // Il faut forcément dériver de HTML Element
 
         this.infoCards = document.querySelectorAll('.info-card-template'); // Sélectionne toutes les balises avec la classe de style correspondante
-        console.log(this.infoCards.length)
-
-        this.setupObserver();
+        this.setUpObserver();
     }
 
-    setupObserver()
+    setUpObserver()
     {
         const observer = new IntersectionObserver(
             (entries, observer) => {
