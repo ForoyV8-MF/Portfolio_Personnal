@@ -28,4 +28,4 @@ class InfoCardTemplate extends HTMLElement
     }
 }
 
-customElements.define('info-card-template', InfoCardTemplate);
+customElements.define('info', InfoCardTemplate);
