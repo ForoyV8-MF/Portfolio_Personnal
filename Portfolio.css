@@ -133,7 +133,7 @@ a { text-decoration: none; }
     margin-top: 1rem; /* Espace de marge au dessus */
     margin-bottom: 3rem; /* Espace de marge au dessous */
 
-    width: 95%; /* Fraction de largeur du contenu parent (Ici, la page) */
+    width: 97%; /* Fraction de largeur du contenu parent (Ici, la page) */
 
     box-sizing: border-box; /* Inclut padding et border dans le calcul des dimensions */
     box-shadow: 0.75rem 0.625rem 0.625rem black; /* Ombre Légère de Surélèvement (Horizontal, Vertical, Flou) */
