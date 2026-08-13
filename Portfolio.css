@@ -122,6 +122,7 @@ a { text-decoration: none; }
     flex-wrap: wrap; /* Retour à la ligne automatique */
     overflow: hidden;
 
+    opacity: 0; /* Sera mis à jour par l'animation */
     background-color: var(--spring-clear-green); /* Fond bleu clair */
 
     gap: 0.5rem; /* Espace FIXE entre contenus enfants */
@@ -132,7 +133,7 @@ a { text-decoration: none; }
     margin-top: 1rem; /* Espace de marge au dessus */
     margin-bottom: 3rem; /* Espace de marge au dessous */
 
-    width: 100%; /* Fraction de largeur du contenu parent (Ici, la page) */
+    width: 95%; /* Fraction de largeur du contenu parent (Ici, la page) */
 
     box-sizing: border-box; /* Inclut padding et border dans le calcul des dimensions */
     box-shadow: 0.75rem 0.625rem 0.625rem black; /* Ombre Légère de Surélèvement (Horizontal, Vertical, Flou) */
@@ -264,3 +265,10 @@ body
 
 .bouton-requin
 { display: flex; text-align: center; margin-bottom: 0.3rem; }
+
+@keyframes fadeInLoading
+{
+    from { opacity: 0; transform: translateY(-1.25rem); } /* Début Invisible */
+    to { opacity: 1; transform: translateY(0rem); } /* Fin Visible */
+}
+.fade-In-Loading { animation: fadeInLoading 0.6s ease-out forwards; }
