@@ -5,7 +5,7 @@ class InfoCardTemplate extends HTMLElement
     {
         super();
 
-        this.infoCards = document.querySelectorAll('.info-card-template');
+        this.infoCards = document.querySelectorAll('.info-card');
 
         this.observer = new IntersectionObserver(
             (entries, observer) => {
