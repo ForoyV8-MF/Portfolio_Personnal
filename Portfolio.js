@@ -1,15 +1,16 @@
-class HeaderTemplate extends HTMLElement
+class DirectFading extends HTMLElement
 {
     constructor()
     {
         super(); // Il faut forcément dériver de HTML Element
-
-        this.header = document.querySelector('.header-main') // Sélectionne la balise correspondante
         this.classList.add('fade-In-Loading')
     }
 }
 
-class InfoCardTemplate extends HTMLElement
+class SharkLogo extends DirectFading {}
+class HeaderMain extends DirectFading {}
+
+class CanonFading extends HTMLElement
 {
     constructor()
     {
@@ -42,5 +43,7 @@ class InfoCardTemplate extends HTMLElement
     }
 }
 
-customElements.define('header-main', HeaderTemplate);
-customElements.define('info-card', InfoCardTemplate); // Définit la balise correspondante comme customisée
+// Définit la balise correspondante comme customisée
+customElements.define('bouton-requin', SharkLogo);
+customElements.define('header-main', HeaderMain);
+customElements.define('info-card', CanonFading);
