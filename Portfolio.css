@@ -1,15 +1,15 @@
 :root
 {
     /* Quelques variances de Vert */
-    --spring-clear-green: #D3EEED;
-    --wide-green: #6CACA4;
-    --clear-green: oklch(76.755% 0.10812 141.509);
-    --deep-green: oklch(79.778% 0.26303 143.075 / 0.534);
-    --really-deep-green: #2B564D;
+    --spring_clear_green: #D3EEED;
+    --wide_green: #6CACA4;
+    --clear_green: #8CC584;
+    --deep_green: #12e42388;
+    --really_deep_green: #2B564D;
 
     /* Gradient */
     --gradient:
-    linear-gradient(90deg, var(--spring-clear-green) 70%, var(--wide-green) 100%);
+    linear-gradient(90deg, var(--spring_clear_green) 70%, var(--wide_green) 100%);
 }
 
 .header-main /* Dimensions et caractéristiques du rectangle de présentation */
@@ -18,6 +18,7 @@
     position: relative; /* Position normale au flux de la page */
     top: 0; /* Collé en haut de la page */
 
+    opacity: 0;
     background: var(--gradient); /* Fond vert-blanc */
 
     gap: 0.5rem; /* Espace FIXE entre contenus enfants */
@@ -47,7 +48,7 @@
 
     background: transparent;
     background-color: transparent;
-    color: var(--really-deep-green); /* Lien Vert */
+    color: var(--really_deep_green); /* Lien Vert */
 
     text-decoration: none; /* Pas de Soulignement */
     transition: color 0.3s; /* Animation au Survol */
@@ -78,7 +79,7 @@
     text-align: center; /* Retour à la ligne centré en block */
 
     /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    color: var(--really-deep-green); /* Texte en Vert */
+    color: var(--really_deep_green); /* Texte en Vert */
 }
 
 h1 
@@ -123,7 +124,7 @@ a { text-decoration: none; }
     overflow: hidden;
 
     opacity: 0; /* Sera mis à jour par l'animation */
-    background-color: var(--spring-clear-green); /* Fond bleu clair */
+    background-color: var(--spring_clear_green); /* Fond bleu clair */
 
     gap: 0.5rem; /* Espace FIXE entre contenus enfants */
     justify-content: space-between; /* Espace DISPONIBLE entre contenus enfants */
@@ -150,7 +151,7 @@ a { text-decoration: none; }
     white-space: wrap; /* Permet le retour à la ligne automatique */
     overflow: hidden; /* Masque le contenu qui dépasse du template */
 
-    background-color: var(--wide-green); /* Fond bleu */
+    background-color: var(--wide_green); /* Fond bleu */
 
     padding: 1rem 1rem 1rem 1rem; /* Espace Interne (Haut Bas Gauche Droite) */
 
@@ -254,13 +255,22 @@ a { text-decoration: none; }
 figcaption
 { font-size: medium; font-style: italic; }
 
-body
+/* body
 {
     width: 100%;
     background-image: url(./images/Fond_CV_Vert.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+} */
+
+.ellipse
+{
+    border-radius: 100% !important;
+    z-index: -1;
+
+    overflow: visible;
+    opacity: 0;
 }
 
 .bouton-requin

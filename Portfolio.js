@@ -10,7 +10,7 @@ class DirectFading extends HTMLElement
 class SharkLogo extends DirectFading {}
 class HeaderMain extends DirectFading {}
 
-class CanonFading extends HTMLElement
+class CanonFadingInfoCards extends HTMLElement
 {
     constructor()
     {
@@ -22,23 +22,23 @@ class CanonFading extends HTMLElement
 
     setUpObserver()
     {
-        const observer = new IntersectionObserver(
-            (entries, observer) => {
+        const InfoCardsObserver = new IntersectionObserver(
+            (entries, InfoCardsObserver) => {
                 entries.forEach(entry => {
-                    this.AppearingAnimation(entry, observer); 
+                    this.AppearingAnimation(entry, InfoCardsObserver); 
                 })
             }, {threshold : 0.5} // Pourcentage d'exposition pour apparition
         );
 
-        this.infoCards.forEach(card => {observer.observe(card);});
+        this.infoCards.forEach(card => {InfoCardsObserver.observe(card);});
     }
 
-    AppearingAnimation(entry, observer)
+    AppearingAnimation(entry, InfoCardsObserver)
     {
         if(entry.isIntersecting)
         {
             entry.target.classList.add('fade-In-Loading');
-            observer.unobserve(entry.target);
+            InfoCardsObserver.unobserve(entry.target);
         }
     }
 }
@@ -46,4 +46,4 @@ class CanonFading extends HTMLElement
 // Définit la balise correspondante comme customisée
 customElements.define('bouton-requin', SharkLogo);
 customElements.define('header-main', HeaderMain);
-customElements.define('info-card', CanonFading);
+customElements.define('info-card', CanonFadingInfoCards);
