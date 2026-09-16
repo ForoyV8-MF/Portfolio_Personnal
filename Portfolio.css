@@ -17,6 +17,7 @@
     display : flex; /* Active Flexbox, gap et justify-content */
     position: relative; /* Position normale au flux de la page */
     top: 0; /* Collé en haut de la page */
+    z-index: 100;
 
     opacity: 0;
     background: var(--gradient); /* Fond vert-blanc */
@@ -119,6 +120,7 @@ a { text-decoration: none; }
 {
     display : flex; /* Active Flexbox, gap et justify-content */
     position: relative; /* Position normale au flux de la page */
+    z-index: 100;
 
     flex-wrap: wrap; /* Retour à la ligne automatique */
     overflow: hidden;
@@ -267,8 +269,6 @@ figcaption
 .ellipse
 {
     border-radius: 100% !important;
-    z-index: -1;
-
     overflow: visible;
     opacity: 0;
 }
