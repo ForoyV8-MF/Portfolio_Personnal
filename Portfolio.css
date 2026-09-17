@@ -12,6 +12,16 @@
     linear-gradient(90deg, var(--spring_clear_green) 70%, var(--wide_green) 100%);
 }
 
+.html, .body
+{
+    margin: 0; /* Supprime les marges par défaut du navigateur */
+    padding: 0; /* Supprime les marges par défaut du navigateur */
+
+    max-width: 100%; /* Limite la largeur du contenu à 100% de la fenêtre */
+    overflow-x: hidden; /* Masque le contenu qui dépasse horizontalement */
+    overflow-y: auto; /* Permet le défilement vertical si nécessaire */
+}
+
 .header-main /* Dimensions et caractéristiques du rectangle de présentation */
 {
     display : flex; /* Active Flexbox, gap et justify-content */
@@ -257,24 +267,27 @@ a { text-decoration: none; }
 figcaption
 { font-size: medium; font-style: italic; }
 
-/* body
+.ellipses-container
 {
-    width: 100%;
-    background-image: url(./images/Fond_CV_Vert.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-} */
+    z-index: -1; /* Derrière tout le reste */
+
+    overflow-x: hidden; /* Masque le contenu qui dépasse du template */
+    scrollbar-width: none; /* Largeur de la barre de défilement */
+
+    width: inherit; /* Hérite de la largeur du parent */
+    max-width: inherit;
+
+    position: fixed; /* Position fixe par rapport à la fenêtre ---> Important */
+}
 
 .ellipse
 {
     border-radius: 100% !important;
-    overflow: visible;
     opacity: 0;
 }
 
 .bouton-requin
-{ display: flex; text-align: center; margin-bottom: 0.3rem; }
+{ display: flex; text-align: center; margin-bottom: 0.3rem; z-index: 1000; }
 
 @keyframes fadeInLoading
 {

@@ -48,8 +48,9 @@ class Ellipsis_BG
 }
 
 const Ellipse_1: Ellipsis_BG = new Ellipsis_BG("140rem", "80rem", "-20vh", "-45vh", Colors.RDG, 10);
-const Ellipse_2: Ellipsis_BG = new Ellipsis_BG("110rem", "55rem", "100vh", "65vh", Colors.WG, 30);
-const Ellipse_3: Ellipsis_BG = new Ellipsis_BG("100rem", "60rem", "-30vh", "60vh", Colors.SCG, 40);
+const Ellipse_2: Ellipsis_BG = new Ellipsis_BG("100rem", "60rem", "-30vh", "60vh", Colors.SCG, 40);
+const Ellipse_3: Ellipsis_BG = new Ellipsis_BG("90rem", "50rem", "30vh", "65vh", Colors.WG, 30);
+
 const Ellipse_4: Ellipsis_BG = new Ellipsis_BG("140rem", "80rem", "120vh", "-45vh", Colors.SCG, 60);
 const Ellipse_5: Ellipsis_BG = new Ellipsis_BG("110rem", "55rem", "150vh", "100vh", Colors.RDG, 60);
 const Ellipse_6: Ellipsis_BG = new Ellipsis_BG("100rem", "60rem", "220vh", "-40vh", Colors.WG, 30);
@@ -66,12 +67,14 @@ function apply_Ellipse(Ellipse: Ellipsis_BG): void
 
         const ellipse_element = document.createElement('div');
 
+        ellipse_element.style.clipPath = 'ellipse(50% 50% at 50% 50%)';
+
         ellipse_element.id = "strange-ellipsoid";
+        ellipse_element.style.position = 'fixed';
+        ellipse_element.style.overflow = 'hidden';
 
         ellipse_element.classList.add('ellipse');
         ellipse_element.classList.add('fade-In-Loading');
-
-        ellipse_element.style.clipPath = 'ellipse(50% 50% at 50% 50%)';
 
         ellipse_element.style.top = Ellipse.get_x_position();
         ellipse_element.style.left = Ellipse.get_y_position();
@@ -81,7 +84,6 @@ function apply_Ellipse(Ellipse: Ellipsis_BG): void
 
         ellipse_element.style.backgroundColor = 'var(--' + Ellipse.get_color()+ ')';
 
-        ellipse_element.style.position = 'absolute';
         ellipse_element.style.zIndex = Ellipse.get_z_index().toString();
 
         container.appendChild(ellipse_element);
